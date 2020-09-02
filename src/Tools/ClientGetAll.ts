@@ -1,5 +1,5 @@
 export default async function getData() {
-  const url = `http://localhost:3001/log`;
+  const url = `https://backend-foodtracker.herokuapp.com/log`;
   let status;
   await fetch(url, {
     method: "GET",

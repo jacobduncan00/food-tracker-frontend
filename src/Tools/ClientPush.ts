@@ -1,7 +1,7 @@
 // Function that is used to communicate with the backend and send the data JSON object
 // to be stored in the MongoDB database
 export default async function sendInfo(newObj: object) {
-  let flag = await fetch("http://localhost:3001/insert", {
+  let flag = await fetch("https://backend-foodtracker.herokuapp.com/insert", {
     method: "POST",
     headers: {
       Accept: "application/json",
