@@ -24,6 +24,7 @@
     "react-router": "^3.2.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
+    "serve": "^11.3.2",
     "styled-components": "^5.1.1",
     "tailwind": "^4.0.0",
     "tailwindcss": "^1.5.1",
@@ -31,7 +32,7 @@
   },
   "scripts": {
     "build:style": "tailwind build src/Styles/index.css -o src/Styles/tailwind.css",
-    "start": "serve build",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
