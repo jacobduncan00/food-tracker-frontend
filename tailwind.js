@@ -1,4 +1,5 @@
 module.exports = {
+  // Purging
   purge: false,
   target: "relaxed",
   prefix: "",
