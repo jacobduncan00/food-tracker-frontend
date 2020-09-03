@@ -39,15 +39,28 @@ const SendInfo = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    const objectToSend = {
-      date,
-      breakfast,
-      lunch,
-      dinner,
-      snacks,
-      drinks,
-      headache,
-    };
+    let objectToSend = {};
+    if (headache.toLowerCase() === "yes") {
+        objectToSend = {
+          date,
+          breakfast,
+          lunch,
+          dinner,
+          snacks,
+          drinks,
+          headache: true,
+        };
+    } else if (headache.toLowerCase() === "no") {
+        objectToSend = {
+          date,
+          breakfast,
+          lunch,
+          dinner,
+          snacks,
+          drinks,
+          headache: false,
+        };
+    }
     const result = await sendInfo(objectToSend);
     if (result === 1) {
       setBreakfast("");
