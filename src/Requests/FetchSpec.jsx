@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import getData from "../Tools/ClientGetSpec";
 import Data from "../Components/Data";
+import toTitleCase from "../Tools/TitleCase";
 import "../Styles/tailwind.css";
 
 export default class fetchSpecific extends Component {
@@ -94,7 +95,7 @@ export default class fetchSpecific extends Component {
                 id="grid-search-type"
                 type="text"
                 placeholder="Breakfast"
-                value={this.state.value1.toLowerCase()}
+                value={toTitleCase(this.state.value1)}
                 onChange={this.handleChange1}
               />
             </div>
@@ -107,7 +108,7 @@ export default class fetchSpecific extends Component {
                 id="grid-search-item"
                 type="text"
                 placeholder="Eggs"
-                value={this.state.value2.toLowerCase()}
+                value={toTitleCase(this.state.value2)}
                 onChange={this.handleChange2}
               />
             </div>

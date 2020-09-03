@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import getDate from "../Tools/Date";
 import sendInfo from "../Tools/ClientPush";
+import toTitleCase from "../Tools/TitleCase";
 import "../Styles/tailwind.css";
-
-interface SyntheticEvent<T> {
-  currentTarget: EventTarget & T;
-}
 
 const SendInfo = () => {
   const [date, setDate] = useState("");
@@ -86,7 +83,7 @@ const SendInfo = () => {
               id="grid-first-name"
               type="text"
               placeholder="Waffles"
-              value={breakfast}
+              value={toTitleCase(breakfast)}
               onChange={handleBreakfastChange}
             />
           </div>
@@ -99,7 +96,7 @@ const SendInfo = () => {
               id="grid-lunch"
               type="text"
               placeholder="Sandwich"
-              value={lunch}
+              value={toTitleCase(lunch)}
               onChange={handleLunchChange}
             />
           </div>
@@ -112,7 +109,7 @@ const SendInfo = () => {
               id="grid-dinner"
               type="text"
               placeholder="Steak"
-              value={dinner}
+              value={toTitleCase(dinner)}
               onChange={handleDinnerChange}
             />
           </div>
@@ -125,7 +122,7 @@ const SendInfo = () => {
               id="grid-snacks"
               type="text"
               placeholder="Chips"
-              value={snacks}
+              value={toTitleCase(snacks)}
               onChange={handleSnacksChange}
             />
           </div>
@@ -138,7 +135,7 @@ const SendInfo = () => {
               id="grid-drinks"
               type="text"
               placeholder="Coca-Cola"
-              value={drinks}
+              value={toTitleCase(drinks)}
               onChange={handleDrinksChange}
             />
           </div>
@@ -151,7 +148,7 @@ const SendInfo = () => {
               id="grid-headaches"
               type="text"
               placeholder="Yes"
-              value={headache}
+              value={toTitleCase(headache)}
               onChange={handleHeadachesChange}
             />
           </div>
