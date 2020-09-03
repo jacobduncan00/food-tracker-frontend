@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build:style": "tailwind build src/Styles/index.css -o src/Styles/tailwind.css",
-    "start": "server -s build",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
